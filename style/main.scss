@@ -18,12 +18,17 @@ header {
     background: var(--v-primary-color);
 }
 
-.navbar, .navbar-light {
+.navbar {
     .navbar-toggler {
-        outline: 0 !important;
         border: none;
+        position: relative;
         &:focus {
             box-shadow: none;
+        }
+        &[aria-expanded="true"] {
+            .navbar-toggler-icon {
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMiIgeT0iMTguOTcwNiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjMiIHRyYW5zZm9ybT0icm90YXRlKC00NSAyIDE4Ljk3MDYpIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMyIgdHJhbnNmb3JtPSJtYXRyaXgoMC43MDcxMDcgMC43MDcxMDcgMC43MDcxMDcgLTAuNzA3MTA3IDIgNC4xNjcyNCkiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=);
+            }
         }
         &-icon {
             width: 1.5rem;
@@ -35,8 +40,13 @@ header {
     .navbar-nav {
         width: 100%;
         .nav-link {
+            color: white;
+            text-transform: uppercase;
            &.active {
                color: white;
+           }
+           img {
+               height: 24px;
            }
         }
     }
@@ -48,10 +58,3 @@ header {
 
 }
 
-.nav-link {
-    color: white;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: white;
-  }
