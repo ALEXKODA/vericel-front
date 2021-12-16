@@ -1,0 +1,57 @@
+// bootstrap.scss
+@import 'bootstrap.css';
+//@import 'bootstrap.min.css';
+
+
+:root {
+    --v-primary-color: #133D8D;
+}
+
+body {
+    min-height: 2000px;
+}
+
+header {
+    top: 0;
+    z-index: 1020;
+    color: var(--bs-white);
+    background: var(--v-primary-color);
+}
+
+.navbar, .navbar-light {
+    .navbar-toggler {
+        outline: 0 !important;
+        border: none;
+        &:focus {
+            box-shadow: none;
+        }
+        &-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeT0iNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjMiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHk9IjExIiB3aWR0aD0iMjQiIGhlaWdodD0iMyIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeT0iMTgiIHdpZHRoPSIyNCIgaGVpZ2h0PSIzIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K);
+        }
+    }
+
+    .navbar-nav {
+        width: 100%;
+        .nav-link {
+           &.active {
+               color: white;
+           }
+        }
+    }
+    &-brand {
+        img {
+            height: 32px;
+        }
+    }
+
+}
+
+.nav-link {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+  }
