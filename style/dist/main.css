@@ -148,7 +148,7 @@ body {
   background: var(--v-primarydark-color);
   color: var(--bs-white);
   padding-top: 6.4rem;
-  padding-bottom: 6.4rem;
+  padding-bottom: 2.4rem;
   min-height: 40vh;
 }
 .programs .event-logo {
