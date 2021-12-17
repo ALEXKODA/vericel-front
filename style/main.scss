@@ -5,10 +5,34 @@
 
 :root {
     --v-primary-color: #133D8D;
+    --v-secondary-color: #B0CBEA;
+    --v-primarydark-color: #00224D;
+    --v-dark-color: #12183F;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    --bs-gutter-x: 2.4rem;
+    --bs-gutter-y: 0;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
-    min-height: 2000px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    color: var(--v-dark-color)
+}
+
+.no-gutters>.col, .no-gutters>[class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 header {
@@ -16,6 +40,21 @@ header {
     z-index: 1020;
     color: var(--bs-white);
     background: var(--v-primary-color);
+}
+
+.btn {
+    //font-family: Raleway;
+}
+
+.btn-primary {
+    border-radius: 100px;
+    background: var(--v-primary-color);
+    border: 1px solid var(--v-primary-color);
+    text-transform: uppercase;
+    padding: 7px 20px;
+    font-size: 2rem;
+    line-height: 28px;
+    font-weight: 700;
 }
 
 .navbar {
@@ -53,11 +92,133 @@ header {
     &-brand {
         img {
             height: 32px;
+            @media only screen and (max-width: 768px) {
+                height: 24px;
+            }
         }
     }
 
 }
 
 .hero-block {
+    background: linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)), url('/style/dist/img/hero-bg.jpg'), var(--v-primarydark-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    h1 {
+        color: #fff;
+        font-size: 6.9rem;
+        line-height: 73px;
+        text-align: center;
+        margin: 115px auto 55px;
+        //font-family: "Playfair Display",sans-serif;
+        font-weight: 900;
+        max-width: 920px;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 3.6rem;
+            line-height: 36px;
+        }
+    }
+    div.line {
+        margin-left: auto;
+        margin-right: auto;
+        height: 0.8rem;
+        background-color: var(--v-primary-color);
+        width: 6.5rem;
+        border-radius: 4px;
+        margin-top: 96px;
+        margin-bottom: 120px;
+    }
+}
+
+.programs {
+    background: var(--v-primarydark-color);
+    color: var(--bs-white);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: 40vh;
+
+    .event-logo {
+        padding-bottom: 4rem;
+        img {
+            width: auto;
+            max-height: 11.7rem;
+            @media only screen and (max-width: 768px) {
+                height: 6.4rem;
+            }
+        }
+    }
     
+    .event-topic {
+        border-top: 3px solid var(--bs-white);
+        padding-top: 2.4rem;
+        .topic-title {
+            text-decoration: none;
+            color: #fff;
+            font-size: 28px;
+            line-height: 32px;
+            margin-bottom: 1.6rem;
+            //font-family: Raleway;
+            font-weight: 700;
+            display: block;
+        }
+        .topic-image {
+            max-width: 20.4rem;
+            @media only screen and (max-width: 768px) {
+                max-width: 11.6rem;
+            }
+            .spk-photo {
+                max-width: 100%;
+                border-radius: 4px;
+                padding-left: 0;
+                padding-right: 0.8rem;
+                padding-bottom: 0.8rem;
+
+                img {
+                    display: block;
+                    width: 98px;
+                    height: 116px;
+                    max-width: 100%;
+                    image-rendering: crisp-edges;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                    @media only screen and (max-width: 768px) {
+                        display: block;
+                        width: 48px;
+                        height: 65px;
+                        max-width: 100%;
+                        max-height: 65px;
+                    }
+                }
+            }
+        }
+        .topic-date {
+            margin-bottom: 3.2rem;
+            color: var(--v-secondary-color);
+            font-size: 1.8rem;
+            font-weight: 900;
+            line-height: 2.2rem;
+            .date {
+                padding-left: 0.8rem;
+            }
+        }
+        .program-descr {
+            font-size: 18px;
+            line-height: 28px;
+            //font-family: Raleway;
+            font-weight: 600;
+        }
+    }
+}
+
+
+footer {
+    font-size: 1.4rem;
+    padding: 1.6rem 0;
+    background: #fff;
+    border-bottom: 20px solid var(--v-primary-color);
+    a {
+        color: var(--v-dark-color);
+    }
 }
