@@ -1,9 +1,10 @@
-@import 'bootstrap.css';
+@import 'bootstrap.min.css';
 :root {
   --v-primary-color: #133D8D;
   --v-secondary-color: #B0CBEA;
   --v-primarydark-color: #00224D;
   --v-dark-color: #12183F;
+  --bs-gutter-x: 2.4rem;
 }
 
 img {
@@ -13,7 +14,9 @@ img {
 
 .row {
   --bs-gutter-x: 2.4rem;
-  --bs-gutter-y: 0;
+}
+.row > * {
+  --bs-gutter-x: 2.4rem;
 }
 
 html {
@@ -31,13 +34,6 @@ body {
   padding-left: 0;
 }
 
-header {
-  top: 0;
-  z-index: 1020;
-  color: var(--bs-white);
-  background: var(--v-primary-color);
-}
-
 .btn-primary {
   border-radius: 100px;
   background: var(--v-primary-color);
@@ -48,7 +44,21 @@ header {
   line-height: 28px;
   font-weight: 700;
 }
+@media only screen and (max-width: 768px) {
+  .btn-primary {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    padding: 2px 16px;
+    text-align: center;
+  }
+}
 
+.navbar {
+  top: 0;
+  z-index: 1020;
+  color: var(--bs-white);
+  background: var(--v-primary-color);
+}
 .navbar .navbar-toggler {
   border: none;
   position: relative;
@@ -87,16 +97,17 @@ header {
 }
 
 .hero-block {
+  text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/style/dist/img/hero-bg.jpg"), var(--v-primarydark-color);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+  position: relative;
 }
 .hero-block h1 {
   color: #fff;
   font-size: 6.9rem;
   line-height: 73px;
-  text-align: center;
   margin: 115px auto 55px;
   font-weight: 900;
   max-width: 920px;
@@ -117,12 +128,31 @@ header {
   margin-top: 96px;
   margin-bottom: 120px;
 }
+.hero-block .icon-down {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: -32px;
+  z-index: 99;
+}
+@media only screen and (max-width: 768px) {
+  .hero-block .icon-down {
+    display: none;
+  }
+}
+.hero-block .icon-down img {
+  width: 64px;
+  height: 64px;
+}
 
 .programs {
   background: var(--v-primarydark-color);
   color: var(--bs-white);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
   min-height: 40vh;
 }
 .programs .event-logo {
@@ -140,6 +170,7 @@ header {
 .programs .event-topic {
   border-top: 3px solid var(--bs-white);
   padding-top: 2.4rem;
+  margin-bottom: 4rem;
 }
 .programs .event-topic .topic-title {
   text-decoration: none;
@@ -150,12 +181,18 @@ header {
   font-weight: 700;
   display: block;
 }
+@media only screen and (max-width: 768px) {
+  .programs .event-topic .topic-title {
+    font-size: 1.7rem;
+    line-height: 2.1rem;
+  }
+}
 .programs .event-topic .topic-image {
   max-width: 20.4rem;
 }
 @media only screen and (max-width: 768px) {
   .programs .event-topic .topic-image {
-    max-width: 11.6rem;
+    max-width: 11rem;
   }
 }
 .programs .event-topic .topic-image .spk-photo {
@@ -185,18 +222,41 @@ header {
 }
 .programs .event-topic .topic-date {
   margin-bottom: 3.2rem;
+}
+@media only screen and (max-width: 768px) {
+  .programs .event-topic .topic-date img {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+.programs .event-topic .topic-date .date {
   color: var(--v-secondary-color);
   font-size: 1.8rem;
   font-weight: 900;
   line-height: 2.2rem;
-}
-.programs .event-topic .topic-date .date {
   padding-left: 0.8rem;
 }
-.programs .event-topic .program-descr {
+@media only screen and (max-width: 768px) {
+  .programs .event-topic .topic-date .date {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+}
+.programs .event-topic .topic-description {
   font-size: 18px;
   line-height: 28px;
   font-weight: 600;
+}
+@media only screen and (max-width: 768px) {
+  .programs .event-topic .topic-description {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 2.4rem;
+  }
+}
+.programs .event-topic .topic-description p {
+  margin-bottom: 1.6rem;
 }
 
 footer {

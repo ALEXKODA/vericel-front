@@ -1,5 +1,5 @@
 // bootstrap.scss
-@import 'bootstrap.css';
+@import 'bootstrap.min.css';
 //@import 'bootstrap.min.css';
 
 
@@ -8,6 +8,7 @@
     --v-secondary-color: #B0CBEA;
     --v-primarydark-color: #00224D;
     --v-dark-color: #12183F;
+    --bs-gutter-x: 2.4rem;
 }
 
 img {
@@ -17,8 +18,14 @@ img {
 
 .row {
     --bs-gutter-x: 2.4rem;
-    --bs-gutter-y: 0;
+    & > * {
+        --bs-gutter-x: 2.4rem;
+    }
 }
+
+
+
+
 
 html {
     font-size: 62.5%;
@@ -35,12 +42,6 @@ body {
     padding-left: 0;
 }
 
-header {
-    top: 0;
-    z-index: 1020;
-    color: var(--bs-white);
-    background: var(--v-primary-color);
-}
 
 .btn {
     //font-family: Raleway;
@@ -55,9 +56,19 @@ header {
     font-size: 2rem;
     line-height: 28px;
     font-weight: 700;
+    @media only screen and (max-width: 768px) {
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+        padding: 2px 16px;
+        text-align: center;
+    }
 }
 
 .navbar {
+    top: 0;
+    z-index: 1020;
+    color: var(--bs-white);
+    background: var(--v-primary-color);
     .navbar-toggler {
         border: none;
         position: relative;
@@ -101,15 +112,16 @@ header {
 }
 
 .hero-block {
+    text-align: center;
     background: linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)), url('/style/dist/img/hero-bg.jpg'), var(--v-primarydark-color);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+    position: relative;
     h1 {
         color: #fff;
         font-size: 6.9rem;
         line-height: 73px;
-        text-align: center;
         margin: 115px auto 55px;
         //font-family: "Playfair Display",sans-serif;
         font-weight: 900;
@@ -130,13 +142,31 @@ header {
         margin-top: 96px;
         margin-bottom: 120px;
     }
+
+    .icon-down {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        bottom: -32px;
+        z-index: 99;
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
+        img {
+            width: 64px;
+            height: 64px;
+        }
+    }
 }
 
 .programs {
     background: var(--v-primarydark-color);
     color: var(--bs-white);
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
     min-height: 40vh;
 
     .event-logo {
@@ -153,6 +183,7 @@ header {
     .event-topic {
         border-top: 3px solid var(--bs-white);
         padding-top: 2.4rem;
+        margin-bottom: 4.0rem;
         .topic-title {
             text-decoration: none;
             color: #fff;
@@ -162,11 +193,15 @@ header {
             //font-family: Raleway;
             font-weight: 700;
             display: block;
+            @media only screen and (max-width: 768px) {
+                font-size: 1.7rem;
+                line-height: 2.1rem;
+            }
         }
         .topic-image {
             max-width: 20.4rem;
             @media only screen and (max-width: 768px) {
-                max-width: 11.6rem;
+                max-width: 11rem;
             }
             .spk-photo {
                 max-width: 100%;
@@ -195,19 +230,39 @@ header {
         }
         .topic-date {
             margin-bottom: 3.2rem;
-            color: var(--v-secondary-color);
-            font-size: 1.8rem;
-            font-weight: 900;
-            line-height: 2.2rem;
+            img {
+                @media only screen and (max-width: 768px) {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+            }
             .date {
+                color: var(--v-secondary-color);
+                font-size: 1.8rem;
+                font-weight: 900;
+                line-height: 2.2rem;
                 padding-left: 0.8rem;
+                @media only screen and (max-width: 768px) {
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                }
             }
         }
-        .program-descr {
+        .topic-description {
             font-size: 18px;
             line-height: 28px;
             //font-family: Raleway;
             font-weight: 600;
+            @media only screen and (max-width: 768px) {
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+                font-weight: 400;
+                margin-bottom: 2.4rem;
+                
+            }
+            p {
+                margin-bottom: 1.6rem;
+            }
         }
     }
 }

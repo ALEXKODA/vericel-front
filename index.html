@@ -12,26 +12,21 @@
     <link rel="stylesheet" href="./style/dist/main.css">
 </head>
 <body>
-    <header class="position-sticky">
-        <div class="container-fluid">
-            <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container-fluid">
-                      <a class="navbar-brand" href="#"><img src="./style/dist/img/logo-white.png" alt=""></a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav justify-content-end">
-                          <a class="nav-link active" aria-current="page" href="#">All events</a>
-                          <a class="nav-link" href="#"><span class="d-none d-lg-block">MACI</span><img src="./style/dist/img/maci-white.png" alt="" class="d-lg-none"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </nav>
-            </div>
+    
+  <nav class="navbar navbar-expand-lg navbar-light position-sticky">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./style/dist/img/logo-white.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav justify-content-end">
+            <a class="nav-link active" aria-current="page" href="#">All events</a>
+            <a class="nav-link" href="#"><span class="d-none d-lg-block">MACI</span><img src="./style/dist/img/maci-white.png" alt="" class="d-lg-none"></a>
+          </div>
         </div>
-    </header>
+      </div>
+    </nav>
 
     <section class="hero-block">
         <div class="container">
@@ -39,12 +34,15 @@
                 <div class="col-12">
                     <h1 class="text-center">Stay up-to-date on our Virtual Offerings and Events</h1>
                     <div class="line"></div>
+                    <a href="#programs" class="icon-down">
+                      <img src="./style/dist/img/arrow-bottom.svg" alt="">
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="programs">
+    <section class="programs" id="programs">
       <div class="container">
         <div class="row">
 
@@ -85,18 +83,57 @@
                         <div class="time">10:30 AM EST</div>
                       </div>
                     </div>
-                    <p class="program-descr">Program Description - Main Page</p>
+                    <div class="topic-description">
+                      <p>Program Description - Main Page</p>
+                    </div>
                   </div>
-                  <div class="col-12 col-lg-2 d-flex align-self-lg-stretch align-items-lg-center">
+                  <div class="col-12 col-lg-2 d-flex align-self-lg-stretch align-items-lg-center justify-content-center justify-content-lg-end">
                     <button type="button" class="btn btn-primary">Register</button>
                   </div>
                 </div>
               </div>
               <!-- Event Topic End-->
 
-              <div class="col-12">
-                Text
+              <!-- Event Topic-->
+              <div class="col-12 event-topic">
+                <div class="row">
+                  <div class="col topic-image">
+                   <div class="row g-0">
+                      <div class="col-6 spk-photo">
+                        <img src="./style/dist/img/spk-photo-1.jpg" alt="Image">
+                      </div>
+                      <div class="col-6 spk-photo">
+                        <img src="./style/dist/img/spk-photo-2.jpg" alt="Image">
+                      </div>
+                      <div class="col-6 spk-photo">
+                        <img src="./style/dist/img/spk-photo-3.jpg" alt="Image">
+                      </div>
+                      <div class="col-6 spk-photo">
+                        <img src="./style/dist/img/spk-photo-1.jpg" alt="Image">
+                      </div>
+                   </div>
+                  </div>
+                  <div class="col-8">
+                    <a class="topic-title" href="" title="Maci ">MACI Topic 2</a>
+                    <div class="topic-date d-flex justify-content-start align-items-center">
+                      <img src="./style/dist/img/calendar.svg" alt="">
+                      <div class="date">
+                        Thusday, January 4, 2022
+                        <div class="time">10:30 AM EST</div>
+                      </div>
+                    </div>
+                    <div class="topic-description">
+                      <p>Program Description - Main Page</p>
+                      <p> <strong>Vericel and the MACI Brand Invites you to attend these events.</strong> </p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-2 d-flex align-self-lg-stretch align-items-lg-center justify-content-center justify-content-lg-end">
+                    <button type="button" class="btn btn-primary">Register</button>
+                  </div>
+                </div>
               </div>
+              <!-- Event Topic End-->
+
             </div>
           </div>
           <!-- End Event section-->
