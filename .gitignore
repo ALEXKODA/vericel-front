@@ -1,6 +1,6 @@
 # vscode project files
-/.vscode
-.vscode
+/.vscode/*
+.vscode/*
 
 
 # netbeans project files
@@ -31,5 +31,3 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
-
-# /api/runtime/*
