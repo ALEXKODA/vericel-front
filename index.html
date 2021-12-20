@@ -8,13 +8,13 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/dist/main.css">
 </head>
 <body>
     
-  <!-- Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light position-sticky">
+    <!-- Navbar-->
+    <nav class="navbar navbar-light position-fixed top-0 start-0 end-0">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="./style/dist/img/logo-white.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,8 +22,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav justify-content-end">
-            <a class="nav-link active" aria-current="page" href="#">All events</a>
-            <a class="nav-link" href="#"><span class="d-none d-lg-block">MACI</span><img src="./style/dist/img/maci-white.png" alt="" class="d-lg-none"></a>
+            <a class="nav-link active" aria-current="page" href="#" title="All events">All events</a>
+            <a class="nav-link" href="#" title="MACI"><!--span class="d-none d-lg-block">MACI</span--><img src="./style/dist/img/maci-white.png" alt="MACI"></a>
           </div>
         </div>
       </div>
@@ -86,7 +86,12 @@
                         <div class="time">10:30 AM EST</div>
                       </div>
                     </div>
-                    <div class="topic-description">
+                    <div class="topic-description d-none d-md-block">
+                      <p>Program Description - Main Page</p>
+                    </div>
+                  </div>
+                  <div class="col-12 d-md-none">
+                    <div class="topic-description-md">
                       <p>Program Description - Main Page</p>
                     </div>
                   </div>
@@ -125,7 +130,13 @@
                         <div class="time">10:30 AM EST</div>
                       </div>
                     </div>
-                    <div class="topic-description">
+                    <div class="topic-description d-none d-md-block">
+                      <p>Program Description - Main Page</p>
+                      <p> <strong>Vericel and the MACI Brand Invites you to attend these events.</strong> </p>
+                    </div>
+                  </div>
+                  <div class="col-12 d-md-none">
+                    <div class="topic-description-md">
                       <p>Program Description - Main Page</p>
                       <p> <strong>Vericel and the MACI Brand Invites you to attend these events.</strong> </p>
                     </div>
