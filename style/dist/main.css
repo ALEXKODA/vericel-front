@@ -33,9 +33,12 @@ body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   color: var(--v-dark-color);
+}
+body.flexi {
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-height: 100%;
 }
 
 .page-wrap {
@@ -387,16 +390,16 @@ footer a {
     line-height: 3.6rem;
   }
 }
-.title-block p.subtitle {
+.title-block p.subtitle, .title-block p.indication {
   font-weight: 600;
-  font-size: 1.7rpx;
+  font-size: 1.7rem;
   line-height: 2.1rem;
   color: var(--mc-black-64);
   max-width: 760px;
   margin: 0 auto 7.2rem;
 }
 @media only screen and (max-width: 992px) {
-  .title-block p.subtitle {
+  .title-block p.subtitle, .title-block p.indication {
     font-size: 1.8rem;
     line-height: 2.8rem;
   }
@@ -495,41 +498,9 @@ footer a {
   color: var(--bs-dark);
   font-weight: 600;
 }
-.show-topics .topic .spk-photo {
-  margin-top: 1.6rem;
-  max-width: 120px;
-}
-@media only screen and (max-width: 768px) {
-  .show-topics .topic .spk-photo {
-    margin-top: 2.4rem;
-    max-width: 100%;
-  }
-}
-.show-topics .topic .spk-photo img {
-  border-radius: 4px;
-  width: 100%;
-  height: 128px;
-  max-width: 100%;
-  image-rendering: crisp-edges;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-@media only screen and (max-width: 360px) {
-  .show-topics .topic .spk-photo img {
-    height: 8rem;
-  }
-}
-.show-topics .topic .spk-photo .spk-name {
-  color: var(--mc-black-64);
-  font-size: 1.2rem;
-  line-height: 1.66rem;
-  font-weight: 700;
-  margin-top: 1rem;
-}
 
 .section-info {
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
-  transition: 0.1s ease-in-out;
 }
 .section-info.fixed {
   position: fixed;
@@ -602,24 +573,57 @@ footer a {
   color: var(--mc-gray-btn);
 }
 
-.error-page .title-block {
+.spk-photo {
+  margin-top: 1.6rem;
+  max-width: 120px;
+}
+@media only screen and (max-width: 768px) {
+  .spk-photo {
+    margin-top: 2.4rem;
+    max-width: 100%;
+  }
+}
+.spk-photo img {
+  border-radius: 4px;
+  width: 100%;
+  height: 128px;
+  max-width: 100%;
+  image-rendering: crisp-edges;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+@media only screen and (max-width: 360px) {
+  .spk-photo img {
+    height: 8rem;
+  }
+}
+.spk-photo .spk-name {
+  color: var(--mc-black-64);
+  font-size: 1.2rem;
+  line-height: 1.66rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.error-page .title-block, .reg-page .title-block {
   background: url("./img/error-bg.svg"), #f5f6f8;
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: top;
+  padding-bottom: 5.6rem;
 }
-.error-page .title-block .pi-info {
+.error-page .title-block .pi-info, .reg-page .title-block .pi-info {
   margin-bottom: 2.4rem;
 }
-.error-page .title-block .line {
+.error-page .title-block .line, .reg-page .title-block .line {
   margin: 0 0 3rem;
 }
 @media only screen and (max-width: 768px) {
-  .error-page .title-block .line {
+  .error-page .title-block .line, .reg-page .title-block .line {
     margin: 0 auto 2.4rem;
   }
 }
-.error-page .title-block p.subtitle {
+.error-page .title-block p.subtitle, .reg-page .title-block p.subtitle {
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 2.8rem;
@@ -627,11 +631,82 @@ footer a {
   max-width: 100%;
   margin: 0 auto 7.2rem;
 }
-.error-page .title-block .btn-primary {
+.error-page .title-block .btn-primary, .reg-page .title-block .btn-primary {
   background-color: var(--mc-gray-btn);
   border-color: var(--mc-gray-btn);
 }
-.error-page .title-block .btn-primary:hover {
+.error-page .title-block .btn-primary:hover, .reg-page .title-block .btn-primary:hover {
   background-color: var(--bs-dark);
   border-color: var(--bs-dark);
+}
+
+.reg-page .title-block {
+  background: url("./img/reg-bg.svg"), #f5f6f8;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding-bottom: 5.6rem;
+}
+.reg-page p.subtitle {
+  font-size: 2.4rem !important;
+  line-height: 2.8rem !important;
+  margin-bottom: 1.6rem !important;
+}
+@media only screen and (max-width: 992px) {
+  .reg-page p.subtitle {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+}
+.reg-page .reg-form {
+  padding-top: 5.6rem;
+  padding-bottom: 2.4rem;
+  background-color: #E8E8E8;
+}
+.reg-page .reg-form .g-4rem {
+  --bs-gutter-x: 4.8rem;
+}
+.reg-page .reg-form .form-wrap {
+  padding: 2.4rem 1.6rem;
+  background-color: var(--mc-primary);
+  border-radius: 8px;
+  margin-bottom: 4rem;
+}
+.reg-page .reg-form .form-wrap h3 {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  color: var(--bs-dark);
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+}
+.reg-page .reg-form .form-wrap .form input, .reg-page .reg-form .form-wrap .form select {
+  border: none;
+  background-color: var(--bs-white);
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-left: 1.6rem;
+  font-size: 1.8rem;
+  border-radius: 0.4rem;
+  margin-bottom: 1.6rem;
+}
+.reg-page .reg-form-head {
+  text-transform: uppercase;
+  color: var(--bs-dark);
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  margin-bottom: 3px;
+  font-weight: 700;
+}
+.reg-page .reg-form p {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--mc-gray-btn);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.reg-page .reg-form span {
+  color: var(--mc-gray-btn);
+  font-size: 1.8rem;
+  line-height: 2.4rem;
 }
