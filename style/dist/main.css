@@ -335,7 +335,7 @@ footer a {
   text-align: center;
   padding-top: 12rem;
   overflow: hidden;
-  background: url("/style/dist/img/brand-bg.svg"), #f5f6f8;
+  background: url("./style/dist/img/brand-bg.svg"), #f5f6f8;
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
