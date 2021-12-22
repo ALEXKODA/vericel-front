@@ -777,3 +777,7 @@ footer a {
   font-weight: 500;
   color: var(--mc-gray-btn);
 }
+.reg-page-confirm .title-block .dropdown-menu li .dropdown-item:hover {
+  background-color: var(--mc-gray-btn);
+  color: var(--bs-white);
+}

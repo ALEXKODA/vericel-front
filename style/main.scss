@@ -771,6 +771,10 @@ footer {
                         line-height: 3.2rem;
                         font-weight: 500;
                         color: var(--mc-gray-btn);
+                        &:hover {
+                            background-color: var(--mc-gray-btn);
+                            color: var(--bs-white);
+                        }
                     }
                 }
             }
