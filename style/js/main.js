@@ -17,10 +17,6 @@ $(document).ready(function(){
             }
         }
     });
-    //$('.section-info').click(function() {
-    //    $('.section-info').removeClass('fixed');
-    //    $('.section-info').addClass('no-fixed');
-    //});
-    console.log('Hello')
+    //console.log('Open/Hide Content')
 });
 

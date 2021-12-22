@@ -18,11 +18,5 @@ $(document).ready(function () {
         $('.section-info-button').attr('href', blockHides);
       }
     }
-  });
-  
-  //$('.section-info').click(function() {
-  //    $('.section-info').removeClass('fixed');
-  //});
-
-  console.log('Hide Content');
+  }); //console.log('Open/Hide Content')
 });
