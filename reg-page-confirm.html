@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="./style/dist/img/favicon.png">
-    <title>Reg Page</title>
+    <title>Reg Page Confirm</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/dist/main.css">
 </head>
-<body class="reg-page">
+<body class="reg-page reg-page-confirm">
     
     <!-- Navbar-->
     <nav class="navbar navbar-light position-fixed top-0 start-0 end-0">
@@ -41,15 +41,28 @@
                 <img class="brand-logo" src="./style/dist/img/maci-black.png" alt="MACI">
               </a>
             </div>
-              <div class="col-8 col-lg-6 col-xl-5 text-start">
+              <div class="col-12 col-lg-7 text-start">
                   <div class="line"></div>
-                  <h1 class="">MACI Topic 1</h1>
+                  <h1 class="">You did it!</h1>
                   <p class="subtitle">
-                    Monday, January 3rd, 2022 <br> 10:50AM EST
+                    You have successfully registered to attend the webinar, <strong> MACI TOPIC 1</strong>. You will receive an email confirmation of your registration and a reminder before the event. You can add the webinar to your calendar by clicking the button below.
                   </p>
                   <p class="indication">
                     MACI® (autologous cultured chondrocytes on porcine collagen membrane) is made up of your own (autologous) cells that are expanded and placed onto a film that is implanted into the area of the cartilage damage and absorbed back into your own tissue.
                   </p>
+              </div>
+              <div class="col-12">
+                <div class="dropdown float-lg-end">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                   Add to Calendar
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Google</a></li>
+                    <li><a class="dropdown-item" href="#">Yahoo</a></li>
+                    <li><a class="dropdown-item" href="#">Outlook</a></li>
+                    <li><a class="dropdown-item" href="#">Others</a></li>
+                  </ul>
+                </div>
               </div>
           </div>
       </div>
@@ -57,57 +70,7 @@
 
     <section class="reg-form">
       <div class="container">
-        <div class="row g-4rem">
-          <div class="col-12 col-lg-4">
-            <div class="form-wrap">
-              <h3>Please provide the following information to attend this event</h3>
-              <form class="form row needs-validation" name="form1" id="form1" action="./reg-page-confirm.html">
-                <div class="col-12">
-                  <input class="form-control" id="first-name" name="first-name" placeholder="First name" type="text"  aria-label="First Name">
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
-                <div class="col-12">
-                  <input class="form-control" id="last-name" name="last-name" placeholder="Last name" type="text"  aria-label="Last name">
-                </div>
-                <div class="col-12">
-                  <input class="form-control" id="phone" name="phone" placeholder="Phone" type="phone"  aria-label="Phone">
-                </div>
-                <div class="col-12">
-                  <input class="form-control" id="email" name="email" placeholder="Email Address" type="email"  aria-label="Email Address">
-                </div>
-                <div class="col-12">
-                  <input class="form-control" id="credentials" name="credentials" placeholder="Professional Credentials" type="credentials"  aria-label="Professional Credentials">
-                <div class="col-12">
-                    <select class="form-select" aria-label="State">
-                      <option selected>State</option>
-                      <option value="1">Alabama</option>
-                      <option value="2">Alaska</option>
-                      <option value="3">Colorado</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <select class="form-select" aria-label="City">
-                    <option selected>City</option>
-                    <option value="1">APO</option>
-                    <option value="2">DPO</option>
-                    <option value="3">FPO</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <select class="form-select" aria-label="Zip">
-                    <option selected>Zip</option>
-                    <option value="1">96785</option>
-                    <option value="2">96456</option>
-                    <option value="3">97645</option>
-                  </select>
-                </div>
-                <div class="col-12 text-start">
-                  <button type="submit" class="btn btn-primary mt-3">Register</button>
-                </div>
-              </form>
-            </div>
-          </div>
+        <div class="row">
           <div class="col-12 col-lg">
             <div class="row">
               <div class="col-12">

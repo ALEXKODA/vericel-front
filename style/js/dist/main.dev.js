@@ -18,9 +18,11 @@ $(document).ready(function () {
         $('.section-info-button').attr('href', blockHides);
       }
     }
-  }); //$('.section-info').click(function() {
+  });
+  
+  //$('.section-info').click(function() {
   //    $('.section-info').removeClass('fixed');
   //});
 
-  console.log('Hello');
+  console.log('Hide Content');
 });

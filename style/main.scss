@@ -42,12 +42,6 @@ body {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
     color: var(--v-dark-color);
-    &.flexi {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        min-height: 100%;
-    }
 }
 
 .page-wrap {
@@ -342,7 +336,6 @@ footer {
 .title-block {
     text-align: center;
     padding-top: 12.0rem;
-    overflow: hidden;
     background: url('./img/brand-bg.svg'), #f5f6f8;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -448,7 +441,7 @@ footer {
             text-decoration: none;
         }
         &-title {
-            color: dark;
+            color: var(--bs-dark);
             font-size: 4.0rem;
             line-height: 4.6rem;
             margin-bottom: 2.4rem;
@@ -600,6 +593,13 @@ footer {
 
 // Error Page, Registration
 
+.error-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+}
+
 .error-page, .reg-page {
     .title-block {
         background: url('./img/error-bg.svg'), #f5f6f8;
@@ -635,6 +635,8 @@ footer {
     }
 }
 
+
+
 .reg-page {
     .title-block {
         background: url('./img/reg-bg.svg'), #f5f6f8;
@@ -650,6 +652,10 @@ footer {
         @media only screen and (max-width: 992px) {
             font-size: 1.8rem;
             line-height: 2.8rem;
+        }
+        strong {
+            color: var(--bs-dark);
+            font-weight: 700;
         }
     }
     .reg-form {
@@ -689,7 +695,7 @@ footer {
             color: var(--bs-dark);
             font-size: 2.4rem;
             line-height: 3.2rem;
-            margin-bottom: 3px;
+            margin-bottom: 0.8rem;
             font-weight: 700;
         }
         p {
@@ -704,6 +710,52 @@ footer {
             color: var(--mc-gray-btn);
             font-size: 1.8rem;
             line-height: 2.4rem;
+        }
+
+        .spk-biographies {
+            margin-bottom: 2.0rem;
+            p {
+                margin-bottom: 0rem;
+            }
+        }
+    }
+}
+
+.reg-page-confirm {
+    .title-block {
+        .btn {
+            background-color: var(--mc-gray-btn);
+            border-color: var(--mc-gray-btn);
+            color: var(--bs-white);
+            &:hover {
+                background-color: var(--bs-dark);
+                border-color: var(--bs-dark);
+            }
+        }
+        .dropdown {
+            button {
+                @media only screen and (max-width: 768px) {
+                    min-width: 100%;
+                }
+            }
+            &-menu {
+                padding: 0.8rem 0.8rem 0;
+                border-radius: 0.8rem;
+                z-index: 1000;
+                min-width: 100%;
+                li {
+                    .dropdown-item {
+                        display: block;
+                        background-color: rgba(80,109,133,.1);
+                        border-radius: 0.4rem;
+                        margin-bottom: 0.8rem;
+                        font-size: 1.6rem;
+                        line-height: 3.2rem;
+                        font-weight: 500;
+                        color: var(--mc-gray-btn);
+                    }
+                }
+            }
         }
     }
 }

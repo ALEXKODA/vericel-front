@@ -34,12 +34,6 @@ body {
   font-size: 1.6rem;
   color: var(--v-dark-color);
 }
-body.flexi {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  min-height: 100%;
-}
 
 .page-wrap {
   flex: 1 0 auto;
@@ -337,7 +331,6 @@ footer a {
 .title-block {
   text-align: center;
   padding-top: 12rem;
-  overflow: hidden;
   background: url("./img/brand-bg.svg"), #f5f6f8;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -455,7 +448,7 @@ footer a {
   text-decoration: none;
 }
 .show-topics .topic-title {
-  color: dark;
+  color: var(--bs-dark);
   font-size: 4rem;
   line-height: 4.6rem;
   margin-bottom: 2.4rem;
@@ -605,6 +598,13 @@ footer a {
   margin-top: 1rem;
 }
 
+.error-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+}
+
 .error-page .title-block, .reg-page .title-block {
   background: url("./img/error-bg.svg"), #f5f6f8;
   background-repeat: no-repeat;
@@ -658,6 +658,10 @@ footer a {
     line-height: 2.8rem;
   }
 }
+.reg-page p.subtitle strong {
+  color: var(--bs-dark);
+  font-weight: 700;
+}
 .reg-page .reg-form {
   padding-top: 5.6rem;
   padding-bottom: 2.4rem;
@@ -694,7 +698,7 @@ footer a {
   color: var(--bs-dark);
   font-size: 2.4rem;
   line-height: 3.2rem;
-  margin-bottom: 3px;
+  margin-bottom: 0.8rem;
   font-weight: 700;
 }
 .reg-page .reg-form p {
@@ -709,4 +713,41 @@ footer a {
   color: var(--mc-gray-btn);
   font-size: 1.8rem;
   line-height: 2.4rem;
+}
+.reg-page .reg-form .spk-biographies {
+  margin-bottom: 2rem;
+}
+.reg-page .reg-form .spk-biographies p {
+  margin-bottom: 0rem;
+}
+
+.reg-page-confirm .title-block .btn {
+  background-color: var(--mc-gray-btn);
+  border-color: var(--mc-gray-btn);
+  color: var(--bs-white);
+}
+.reg-page-confirm .title-block .btn:hover {
+  background-color: var(--bs-dark);
+  border-color: var(--bs-dark);
+}
+@media only screen and (max-width: 768px) {
+  .reg-page-confirm .title-block .dropdown button {
+    min-width: 100%;
+  }
+}
+.reg-page-confirm .title-block .dropdown-menu {
+  padding: 0.8rem 0.8rem 0;
+  border-radius: 0.8rem;
+  z-index: 1000;
+  min-width: 100%;
+}
+.reg-page-confirm .title-block .dropdown-menu li .dropdown-item {
+  display: block;
+  background-color: rgba(80, 109, 133, 0.1);
+  border-radius: 0.4rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  font-weight: 500;
+  color: var(--mc-gray-btn);
 }
