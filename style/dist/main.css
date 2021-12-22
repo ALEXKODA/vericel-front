@@ -657,6 +657,15 @@ footer a {
     background-size: auto 120vh;
   }
 }
+.reg-page .title-block .text-links {
+  margin-top: 4rem;
+  color: var(--bs-dark);
+  font-weight: 700;
+  line-height: 3.2rem;
+}
+.reg-page .title-block .text-links a {
+  color: var(--bs-dark);
+}
 .reg-page p.subtitle {
   font-size: 2.4rem !important;
   line-height: 2.8rem !important;
@@ -780,4 +789,8 @@ footer a {
 .reg-page-confirm .title-block .dropdown-menu li .dropdown-item:hover {
   background-color: var(--mc-gray-btn);
   color: var(--bs-white);
+}
+
+.join-webinar .title-block p.indication {
+  margin: 0 auto 4rem;
 }
