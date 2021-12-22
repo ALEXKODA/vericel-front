@@ -644,6 +644,12 @@ footer {
         background-size: cover;
         background-position: top;
         padding-bottom: 5.6rem;
+        @media only screen and (max-width: 768px) {
+            background-size: auto 144vh;
+        }
+        @media (min-width: 768px) and (max-width: 992px) {
+            background-size: auto 120vh;
+        }
     }
     p.subtitle {
         font-size: 2.4rem !important;
@@ -681,12 +687,21 @@ footer {
                 input, select {
                     border: none;
                     background-color: var(--bs-white);
-                    padding-top: 1.2rem;
-                    padding-bottom: 1.2rem;
-                    padding-left: 1.6rem;
+                    padding: 1.2rem 1.6rem;
                     font-size: 1.8rem;
                     border-radius: 0.4rem;
-                    margin-bottom: 1.6rem;
+                    @media only screen and (max-width: 768px) {
+                        padding: 1.0rem 1.2rem;
+                    }
+                }
+                button {
+                    background-color: var(--mc-gray-btn);
+                    border-color: var(--mc-gray-btn);
+                    color: var(--bs-white);
+                    &:hover {
+                        background-color: var(--bs-dark);
+                        border-color: var(--bs-dark);
+                    }
                 }
             }
         }
@@ -723,6 +738,9 @@ footer {
 
 .reg-page-confirm {
     .title-block {
+        @media only screen and (max-width: 768px) {
+            background-size: auto 144vh;
+        }
         .btn {
             background-color: var(--mc-gray-btn);
             border-color: var(--mc-gray-btn);

@@ -41,7 +41,7 @@
                 <img class="brand-logo" src="./style/dist/img/maci-black.png" alt="MACI">
               </a>
             </div>
-              <div class="col-8 col-lg-6 col-xl-5 text-start">
+              <div class="col-12 col-lg-7 col-xl-5 text-center text-lg-start">
                   <div class="line"></div>
                   <h1 class="">MACI Topic 1</h1>
                   <p class="subtitle">
@@ -62,22 +62,25 @@
             <div class="form-wrap">
               <h3>Please provide the following information to attend this event</h3>
               <form class="form row needs-validation" name="form1" id="form1" action="./reg-page-confirm.html">
-                <div class="col-12">
+                <div class="col-12 mb-4">
                   <input class="form-control" id="first-name" name="first-name" placeholder="First name" type="text"  aria-label="First Name">
                   <div class="valid-feedback">Looks good!</div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 mb-4">
                   <input class="form-control" id="last-name" name="last-name" placeholder="Last name" type="text"  aria-label="Last name">
                 </div>
-                <div class="col-12">
-                  <input class="form-control" id="phone" name="phone" placeholder="Phone" type="phone"  aria-label="Phone">
+                <div class="col-12 mb-4">
+                  <input class="form-control is-invalid" id="phone" name="phone" placeholder="Phone" type="phone"  aria-label="Phone">
+                  <div class="invalid-feedback">Enter the correct phone number</div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 mb-4">
                   <input class="form-control" id="email" name="email" placeholder="Email Address" type="email"  aria-label="Email Address">
+                  <div class="valid-feedback">Looks good!</div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 mb-4">
                   <input class="form-control" id="credentials" name="credentials" placeholder="Professional Credentials" type="credentials"  aria-label="Professional Credentials">
-                <div class="col-12">
+                </div>
+                <div class="col-12 mb-4">
                     <select class="form-select" aria-label="State">
                       <option selected>State</option>
                       <option value="1">Alabama</option>
@@ -85,8 +88,7 @@
                       <option value="3">Colorado</option>
                     </select>
                   </div>
-                </div>
-                <div class="col-12">
+                <div class="col-12 mb-4">
                   <select class="form-select" aria-label="City">
                     <option selected>City</option>
                     <option value="1">APO</option>
@@ -94,7 +96,7 @@
                     <option value="3">FPO</option>
                   </select>
                 </div>
-                <div class="col-12">
+                <div class="col-12 mb-4">
                   <select class="form-select" aria-label="Zip">
                     <option selected>Zip</option>
                     <option value="1">96785</option>

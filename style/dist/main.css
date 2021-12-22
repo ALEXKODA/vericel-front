@@ -647,6 +647,16 @@ footer a {
   background-position: top;
   padding-bottom: 5.6rem;
 }
+@media only screen and (max-width: 768px) {
+  .reg-page .title-block {
+    background-size: auto 144vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .reg-page .title-block {
+    background-size: auto 120vh;
+  }
+}
 .reg-page p.subtitle {
   font-size: 2.4rem !important;
   line-height: 2.8rem !important;
@@ -686,12 +696,23 @@ footer a {
 .reg-page .reg-form .form-wrap .form input, .reg-page .reg-form .form-wrap .form select {
   border: none;
   background-color: var(--bs-white);
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
-  padding-left: 1.6rem;
+  padding: 1.2rem 1.6rem;
   font-size: 1.8rem;
   border-radius: 0.4rem;
-  margin-bottom: 1.6rem;
+}
+@media only screen and (max-width: 768px) {
+  .reg-page .reg-form .form-wrap .form input, .reg-page .reg-form .form-wrap .form select {
+    padding: 1rem 1.2rem;
+  }
+}
+.reg-page .reg-form .form-wrap .form button {
+  background-color: var(--mc-gray-btn);
+  border-color: var(--mc-gray-btn);
+  color: var(--bs-white);
+}
+.reg-page .reg-form .form-wrap .form button:hover {
+  background-color: var(--bs-dark);
+  border-color: var(--bs-dark);
 }
 .reg-page .reg-form-head {
   text-transform: uppercase;
@@ -721,6 +742,11 @@ footer a {
   margin-bottom: 0rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .reg-page-confirm .title-block {
+    background-size: auto 144vh;
+  }
+}
 .reg-page-confirm .title-block .btn {
   background-color: var(--mc-gray-btn);
   border-color: var(--mc-gray-btn);
